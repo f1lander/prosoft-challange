@@ -1,4 +1,4 @@
-app.directive('customCalendar', function () {
+app.directive('customCalendar', function ($filter) {
     return{
         restrict:'E',
          scope: {
@@ -10,7 +10,7 @@ app.directive('customCalendar', function () {
             var startDate = scope.$eval(attrs.startDate);
             var numberDays = scope.$eval(attrs.numberDays);
             var countryCode = scope.countryCode;
-            console.log('start date: ',startDate, 'number: ', numberDays, ' country code:', countryCode);
+            console.log('start date: ', $filter('date')(startDate,'M/d/yyyy'), 'number: ', numberDays, ' country code:', countryCode);
             cal_days_labels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
             calMonthsLabels = ['January', 'February','March', 'April','May', 'June', 'July', 'August', 'September','October', 'November', 'December'];
