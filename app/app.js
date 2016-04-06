@@ -3,7 +3,6 @@ var app = angular.module('calendar',[
    'toaster',
    'ngAnimate',
    'ngMaterial',
-   'ngMaterialDatePicker',
    'ngStorage', 
 ]);
 
@@ -18,10 +17,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '',
         templateUrl: 'views/base.html'
       })
-        .state('clocky', {
-          url: '/clocky',
+        .state('calendar', {
+          url: '/calendar',
           parent: 'base',
-          templateUrl: 'views/clocky.html',
+          templateUrl: 'views/calendar.html',
           controller: 'CalendarCtrl'
         })
   

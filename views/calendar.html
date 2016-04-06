@@ -1,6 +1,22 @@
 <div>
-	<div class="row">
-		
-    </div>	
-	
+    <div class="row">
+        <h1>Calendar</h1>
+        <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+        <div>
+        <md-input-container>
+            <label>Start Date</label>
+            <input ng-model="startDate" type="date">
+        </md-input-container>
+        <md-input-container>
+            <label>Number Of Days</label>
+            <input ng-model="numberDays" type="number">
+        </md-input-container>
+        <md-input-container>
+            <label>Country Code</label>
+            <input ng-model="countryCode" type="text">
+        </md-input-container>
+        </div>
+    </md-content>
+        <custom-calendar start-date="startDate" number-days="numberDays" country-code="countryCode"></custom-calendar>
+    </div>
 </div>
